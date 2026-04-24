@@ -256,6 +256,9 @@ onUnmounted(() => {
           <p v-for="paragraph in portfolioData.about.paragraphs" :key="paragraph">
             {{ paragraph }}
           </p>
+          <p class="company-note">
+            Também atuo com projetos sob a marca <strong>{{ portfolioData.company.name }}</strong>.
+          </p>
         </div>
       </section>
 
@@ -467,6 +470,10 @@ onUnmounted(() => {
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <p>© 2026 {{ portfolioData.company.shortName }}</p>
+    </footer>
   </div>
 </template>
 
@@ -837,6 +844,10 @@ h3 {
   margin: 0;
   color: var(--text-muted);
   line-height: 1.8;
+}
+
+.company-note strong {
+  color: #e5f2ff;
 }
 
 .skills-list {
@@ -1351,6 +1362,19 @@ h3 {
   color: #ffe3b7;
 }
 
+.footer {
+  margin-top: 2.5rem;
+  padding: 1.1rem 0 0.2rem;
+  border-top: 1px solid var(--stroke-soft);
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -1443,7 +1467,6 @@ h3 {
   }
 }
 </style>
-
 
 
 

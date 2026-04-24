@@ -43,6 +43,11 @@ type ContactContent = {
   note: string
 }
 
+type CompanyContent = {
+  name: string
+  shortName: string
+}
+
 export type PortfolioData = {
   hero: HeroContent
   about: AboutContent
@@ -51,6 +56,7 @@ export type PortfolioData = {
   projects: ProjectItem[]
   social: SocialLinks
   contact: ContactContent
+  company: CompanyContent
 }
 
 export const portfolioData: PortfolioData = {
@@ -223,6 +229,10 @@ export const portfolioData: PortfolioData = {
     whatsappLabel: '(51) 99104-6060',
     whatsappUrl: 'https://wa.me/5551991046060',
     note: 'Aberto a oportunidades, freelas e projetos colaborativos.',
+  },
+  company: {
+    name: 'ViaCode Solutions',
+    shortName: 'ViaCode',
   },
 }
 
